@@ -9,6 +9,7 @@ import {Card} from "../models/card";
 export class CardService {
 
   cards!:Card[];
+  filterCards!:Card[];
   constructor(
     @Inject('apiURL') private apiURL:string,
     private http:HttpClient
@@ -19,6 +20,7 @@ export class CardService {
      this.http.get<Card[]>(this.apiURL+'/cards')
        .subscribe((res:any)=>{
          this.cards=res;
+         this.filterCards=res;
        })
   }
   addCard(card:Card):Observable<any>{

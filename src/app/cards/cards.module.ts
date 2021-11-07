@@ -10,13 +10,14 @@ import {MatButtonModule} from '@angular/material/button';
 import { CardModalComponent } from './card-modal/card-modal.component';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-
+import { CardSearchComponent } from './card-search/card-search.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 @NgModule({
   declarations: [
     CardsComponent,
     CardItemComponent,
-    CardModalComponent
+    CardModalComponent,
+    CardSearchComponent
   ],
   imports: [
     CommonModule,
